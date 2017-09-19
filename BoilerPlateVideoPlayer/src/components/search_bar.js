@@ -14,6 +14,7 @@ import React from 'react';
 //Whenever a state changes, that component is re-rendered
 //If that component has children, then its children re-render as well.
 //A component's initial state must be initialized in the constructor
+//In React state is on the component level, whereas in redux state is on the application level
 
 //This version of SearchBar is an actual class and can handle increased functionality
 //This SearchBar extends ReactComponent hence it has increased functionalities inherited from React
@@ -55,18 +56,19 @@ class SearchBar extends React.Component {
         */}
 
         return (
-            <div>
+            <div className="search-bar">
                 <input 
-                    onChange={event =>  this.setState({ term: event.target.value })} 
+                    onChange={event =>  this.onInputChange(event.target.value)} 
                     value={this.state.term} 
                 />
             </div>
         );
     }
 
-    // onInputChange(event) {
-    //     console.log(event.target.value);
-    // }
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
+    }
 
 }
 
