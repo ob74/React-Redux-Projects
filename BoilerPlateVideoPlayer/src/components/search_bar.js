@@ -6,6 +6,8 @@ import React from 'react';
 //     return <input />;
 // };
 
+//A class based component has props by default, whereas a functional component will have to take in props as a parameter
+
 //STATE
 //State is a plain javascript object which is used to record and react (pun intended) to user events
 //Each class based component has its own state object
