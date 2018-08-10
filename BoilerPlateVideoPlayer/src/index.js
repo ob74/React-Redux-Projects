@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
 
 // YouTube API Key
-const API_KEY = "AIzaSyAYwRhwwjzOX18AcBQd8ea2jp-Tw8wryqQ";
 
 
 // Created React Component
